@@ -104,8 +104,8 @@ if ($x !== '') {
 
 3000円の100円引きは
 <?php
-print(floor(100 / 3000 * 100)); //切り捨て
-print(ceil(100 / 3000 * 100)); //切り上げ
+// print(floor(100 / 3000 * 100)); //切り捨て
+// print(ceil(100 / 3000 * 100)); //切り上げ
 print(round(100 / 3000 * 100 ,1)); //四捨五入
 ?>
 %引きです。
@@ -113,9 +113,15 @@ print(round(100 / 3000 * 100 ,1)); //四捨五入
 <?php $sum = 100+200+300; $tax = 1.08; ?>
 <?php $tax = 1.08; ?>
 <?php print($sum*$tax); ?>
+
+<?php
+$date = sprintf('%04d年 %02d月 %02d日 %s', 2018, 1, 23, '(fly)');
+ //parameterは % の数で判断 %が3個あるので 第4parameterまで読み込む
+print($date);
+
+
+?>
 </pre>
 </main>
 </body>    
 </html>
-
-php stady 2week
