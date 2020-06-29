@@ -118,7 +118,25 @@ print(round(100 / 3000 * 100 ,1)); //四捨五入
 $date = sprintf('%04d年 %02d月 %02d日 %s', 2018, 1, 23, '(fly)');
  //parameterは % の数で判断 %が3個あるので 第4parameterまで読み込む
 print($date);
+?>
 
+<?php
+$succsess = file_put_contents('../../news_data/news.txt', '2020-06-29 ホームページをリニューアルしました');
+// file_put_contents は指定したファイルに書き込む
+// 第一引数 ファイル指定
+// 第二引数 書き込み内容
+if ($succsess){ // if (succsess === true)
+  print('ファイルへの書き込みが完了しました');
+} else {
+  print('ファイル書き込みに失敗しました。ファイル権限などを確認ください');
+}
+?>
+
+<?php
+$news = file_get_contents('../../news_data/news.txt');
+// file_get_contents は指定したファイルに読み込む
+// 第一引数 ファイル指定
+print($news);
 
 ?>
 </pre>
