@@ -144,6 +144,18 @@ print($news);
 <?php
 // readfile('../../news_data/news.txt');
 ?>
+
+<?php
+$xmlTree = simplexml_load_file('https://h2o-space.com/feed/');
+var_dump($xmlTree);
+//simplexml_load_file xmlファイルを読み込む
+foreach ($xmlTree->channel->item as $item): //foreach 繰り返して as $hoge 変数に入れいる ->で各階層のプロパティを指定
+?>
+・<a href="<?php print($item->link); ?>"><?php print
+($item->title); ?></a>
+<?php
+endforeach;
+?>
 </pre>
 </main>
 </body>    
