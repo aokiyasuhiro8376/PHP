@@ -145,7 +145,7 @@ print($news);
 // readfile('../../news_data/news.txt');
 ?>
 
-<?php
+<!-- <?php
 $xmlTree = simplexml_load_file('https://h2o-space.com/feed/');
 var_dump($xmlTree);
 //simplexml_load_file xmlファイルを読み込む
@@ -155,7 +155,20 @@ foreach ($xmlTree->channel->item as $item): //foreach 繰り返して as $hoge �
 ($item->title); ?></a>
 <?php
 endforeach;
+?> -->
+
+<?php
+$file = file_get_contents('https://h2o-space.com/feed/json/'); //ファイルの内容を読み込む
+$json = json_decode($file); //jsonデータをphpで処理できるようにするファンクション jsonデータを渡す また処理した結果を返してくれる
+// var_dump($json);
+
+foreach($json->items as $item):
 ?>
+・<a href='<?php print($item->url); ?>'><?php print($item->title); ?></a>
+<?php
+endforeach;
+?>
+
 </pre>
 </main>
 </body>    
