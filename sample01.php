@@ -162,7 +162,7 @@ $file = file_get_contents('https://h2o-space.com/feed/json/'); //ファイルの
 $json = json_decode($file); //jsonデータをphpで処理できるようにするファンクション jsonデータを渡す また処理した結果を返してくれる
 // var_dump($json);
 
-foreach($json->items as $item):
+foreach($json->items as $item): //foreach 繰り返して as $hoge 変数に入れいる ->で各階層のプロパティを指定
 ?>
 ・<a href='<?php print($item->url); ?>'><?php print($item->title); ?></a>
 <?php

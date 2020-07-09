@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- Required meta tags -->
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="../css/style.css">
+
+<title>PHP</title>
+</head>
+<body>
+<header>
+<h1 class="font-weight-normal">PHP</h1>    
+</header>
+
+<main>
+<h2>Practice</h2>
+
+<form action='submit.php' method='get'>
+  <!-- action属性 情報の送信先  method属性 情報の送信 方法・形式-->
+  <label for='my_name'>お名前:</label>
+  <input type='text' id='my_name' name='my_name' maxlength='255' value=''>
+  <!-- type='text'は入力場所textfield id属性はこのページの中での唯一の名前 name属性はformを送信した時にphpに渡される時のkye maxlength属性は入力文字数上限 value属性は初期表示 -->
+  <input type='submit' value='送信する'>
+  <!-- type='submit'は送信用のボタン value属性はボタンの表面に現れる文字 -->
+</form>
+
+
+</main>
+</body>    
+</html>
