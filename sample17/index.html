@@ -19,7 +19,7 @@
 <h2>Practice</h2>
 
 <form action='submit.php' method='get'>
-  <!-- action属性 情報の送信先  method属性 情報の送信 方法・形式-->
+  <!-- action属性 情報の送信先  method属性 情報の送信 方法・形式 urlに載せる方がget 載せない方がpost(裏側で動いている)(パスワードや秘密の暗号)-->
   <label for='my_name'>お名前:</label>
   <input type='text' id='my_name' name='my_name' maxlength='255' value=''>
   <!-- type='text'は入力場所textfield id属性はこのページの中での唯一の名前 name属性はformを送信した時にphpに渡される時のkye maxlength属性は入力文字数上限 value属性は初期表示 -->
