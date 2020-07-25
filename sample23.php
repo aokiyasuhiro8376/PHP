@@ -47,8 +47,8 @@
       // 数字が1以上の場合true
       print('<tr style="background-color: #ccc">');
     } else {
-      // 数字が0の場合はfalce
-      // すなわち、偶数の場合は0なのでfalceでバックグラウンドなし
+      // 数字が0の場合はfalse
+      // すなわち、偶数の場合は0なのでfalseでバックグラウンドなし
       print('<tr>');
     }
     print('<td>' . $i . '行目</td>');
